@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/',  // Set this to your repo name if not served from domain root
+  base: '/hasif/',  // Set this to your repo name if not served from domain root
   build: {
     outDir: 'dist',
     emptyOutDir: true,
