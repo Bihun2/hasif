@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Hasif's Portfolio</title>
+    <meta name="description" content="Page not found">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://kit.fontawesome.com/3868e1efef.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: var(--color-primary, #0a192f);
+            color: var(--color-text, #8892b0);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 8rem;
+            margin: 0;
+            color: var(--color-secondary, #64ffda);
+            font-weight: 700;
+            position: relative;
+            line-height: 1;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0.5rem;
+            left: 50%;
+            width: 80px;
+            height: 4px;
+            background-color: var(--color-secondary, #64ffda);
+            transform: translateX(-50%);
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            color: var(--color-light, #ccd6f6);
+            margin: 1.5rem 0;
+        }
+        
+        p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--color-secondary, #64ffda);
+            color: var(--color-secondary, #64ffda);
+            text-decoration: none;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+        }
+        
+        .glitch-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .glitch {
+            position: relative;
+            animation: glitch 1s linear infinite;
+        }
+        
+        @keyframes glitch {
+            2%, 64% {
+                transform: translate(2px, 0) skew(0deg);
+            }
+            4%, 60% {
+                transform: translate(-2px, 0) skew(0deg);
+            }
+            62% {
+                transform: translate(0, 0) skew(5deg); 
+            }
+        }
+        
+        .glitch:before,
+        .glitch:after {
+            content: '404';
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.8;
+        }
+        
+        .glitch:before {
+            animation: glitch 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+            color: #00ffff;
+            z-index: -1;
+        }
+        
+        .glitch:after {
+            animation: glitch 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+            color: #ff00ff;
+            z-index: -2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="glitch-wrapper">
+            <h1 class="glitch">404</h1>
+        </div>
+        <h2>Page Not Found</h2>
+        <p>Sorry, the page you are looking for doesn't exist or has been moved.</p>
+        <a href="/" class="btn">Go Home</a>
+    </div>
+</body>
+</html>
